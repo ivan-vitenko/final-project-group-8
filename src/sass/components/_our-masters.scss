@@ -1,3 +1,15 @@
+.our-masters {
+  background-color: $secondary-background-color;
+}
+
+.section-title.margin {
+  margin-bottom: 44px;
+}
+
+.member:not(:last-child) {
+  margin-bottom: 64px;
+}
+
 .photo {
   margin-bottom: 30px;
 }
@@ -36,17 +48,14 @@
   height: 44px;
   border-radius: 50%;
 
-  color: red;
   fill: $title-text-color;
   background-color: $primary-background-color;
 
-  transition: color $duration-animation $timing-animation 0ms,
-    background-color $duration-animation $timing-animation 0ms;
+  transition: fill $duration-animation $timing-animation 0ms;
 
   &:hover,
   &:focus {
-    fill: currentColor;
-    color: $accent-color;
+    fill: $accent-color;
     background-color: $primary-background-color;
   }
 }
