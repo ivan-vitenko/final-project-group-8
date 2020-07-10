@@ -3,25 +3,111 @@
   width: 69px;
 }
 
-.mobile-menu-container {
+.header-content {
+  position: absolute;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 40px;
+  padding-left: 31px;
+  padding-right: 31px;
 
+  @media screen and (min-width: $tablet-screen) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mobile-menu-backdrop {
   @media screen and (max-width: $tablet-screen - 1px) {
     display: none;
     position: absolute;
     z-index: 999;
-    top: calc(100% + 1px);
-    left: 0;
     width: 100%;
-    padding: 50px 60px 60px 60px;
-    background-color: $primary-background-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
-      0px 4px 8px rgba(0, 0, 0, 0.04);
+    left: 0;
+    top: -40px;
 
     &.is-open {
       display: block;
     }
   }
+}
+
+.mobile-menu-container {
+  //display: flex;
+  //align-items: center;
+  //justify-content: space-between;
+  width: 337px;
+  margin-left: auto;
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    background-color: $primary-background-color;
+    box-shadow: -1px 0px 3px rgba(0, 0, 0, 0.16),
+      -2px 0px 4px rgba(0, 0, 0, 0.08), -4px 0px 8px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.main-nav {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    display: flex;
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    margin-right: 305px;
+  }
+}
+
+.main-nav__nav {
+  color: $title-text-color;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.main-nav__mobile-menu-button {
+  background-color: transparent;
+  padding: 0;
+  border-width: 0;
+  z-index: 1000;
+
+  @media screen and (min-width: $tablet-screen) {
+    display: none;
+  }
+}
+
+.main-nav__mobile-menu-icon {
+  width: 40px;
+  height: 40px;
+
+  .main-nav__mobile-menu-button:hover & {
+    color: $accent-color;
+    fill: currentColor;
+  }
+}
+
+.main-nav__mobile-menu-icon--open {
+  display: block;
+}
+
+.main-nav__mobile-menu-button.is-open .main-nav__mobile-menu-icon--open {
+  display: none;
+}
+
+.main-nav__mobile-menu-icon--close {
+  display: none;
+}
+
+.main-nav__mobile-menu-button.is-open .main-nav__mobile-menu-icon--close {
+  display: block;
+}
+
+.slider {
 }
