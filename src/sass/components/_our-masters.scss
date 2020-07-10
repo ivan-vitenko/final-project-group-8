@@ -1,0 +1,37 @@
+.photo {
+  margin-bottom: 30px;
+}
+
+.name {
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.39;
+  text-align: center;
+  color: $title-text-color;
+}
+
+.post {
+  margin-bottom: 30px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: center;
+  color: $accent-color;
+}
+
+.social-nets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.net {
+  border-radius: 50%;
+}
+
+.net:not(:last-child) {
+  margin-right: 10px;
+}
