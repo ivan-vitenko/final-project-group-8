@@ -86,7 +86,7 @@
   }
 
   @media screen and (min-width: $desktop-screen) {
-    margin-right: 322px;
+    margin-right: 311px;
   }
 }
 
@@ -171,6 +171,7 @@
 .header-socials {
   text-transform: initial;
   letter-spacing: 0.2em;
+  margin-bottom: 0;
 
   @media screen and (max-width: $tablet-screen - 1px) {
     align-items: initial;
@@ -181,7 +182,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: rotate(-90deg) translateY(-54px) translateX(-407px);
+    transform: rotate(-90deg) translateY(-50px) translateX(-407px);
   }
 
   &::before {
@@ -264,6 +265,13 @@
   @media screen and (min-width: $tablet-screen) {
     width: 609px;
     right: 0;
+    padding-top: 272px;
+    padding-bottom: 245px;
+    padding-left: 120px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    width: 1125px;
   }
 }
 
