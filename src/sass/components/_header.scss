@@ -28,6 +28,9 @@
     width: 100%;
     left: 0;
     top: -40px;
+    background: rgba(25, 28, 38, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
 
     &.is-open {
       display: block;
@@ -36,11 +39,13 @@
 }
 
 .mobile-menu-container {
-  //display: flex;
-  //align-items: center;
-  //justify-content: space-between;
   width: 337px;
   margin-left: auto;
+  padding: 118px 40px 227px 40px;
+
+  @media screen and (max-width: 336px) {
+    width: 100%;
+  }
 
   @media screen and (max-width: $tablet-screen - 1px) {
     background-color: $primary-background-color;
@@ -84,6 +89,7 @@
 }
 
 .main-nav__mobile-menu-icon {
+  display: block;
   width: 40px;
   height: 40px;
 
