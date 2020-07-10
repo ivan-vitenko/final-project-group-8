@@ -1,64 +1,69 @@
-<header>
-  <div>
-    <div class="header-content">
-      <a href="./index.html" class="logo">
-        <img src="./images/logo.svg" alt="" />
-      </a>
+<header class="container header">
+  <div class="header-nav-container">
+    <a href="./index.html">
+      <svg class="logo" aria-label="Логотип">
+        <use href="./images/sprite.svg#icon-Logo"></use>
+      </svg>
+    </a>
 
-      <div class="mobile-menu-backdrop" id="menu-container" data-menu>
-        <div class="mobile-menu-container">
-          <nav class="main-nav">
-            <ul class="main-nav__nav">
-              <li><a href="#about-us">О нас</a></li>
-              <li><a href="#price">Услуги и цены</a></li>
-              <li><a href="#masters">Мастера</a></li>
-              <li><a href="#contacts">Контакты</a></li>
-            </ul>
-          </nav>
+    <div class="mobile-menu-backdrop" id="menu-container" data-menu>
+      <div class="mobile-menu-container">
+        <nav class="main-nav">
+          <ul class="main-nav__nav">
+            <li><a href="#about-us">О нас</a></li>
+            <li><a href="#price">Услуги и цены</a></li>
+            <li><a href="#masters">Мастера</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
 
-          <div>
-            <a href="tel:+380441111111">+38 044 111 11 11</a>
-            <button>онлайн-запись</button>
-          </div>
+        <div class="header-contacts">
+          <a class="header-phone" href="tel:+380441111111">+38 044 111 11 11</a>
+          <button class="button secondary">онлайн-запись</button>
+        </div>
 
+        <div class="slogan header-socials">
           <ul>
-            <li>Instagram</li>
-            <li>Youtube</li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Youtube</a></li>
           </ul>
         </div>
       </div>
+    </div>
 
-      <button
-        type="button"
-        class="main-nav__mobile-menu-button"
-        aria-expanded="false"
-        aria-controls="menu-container"
-        data-menu-button
+    <button
+      type="button"
+      class="main-nav__mobile-menu-button"
+      aria-expanded="false"
+      aria-controls="menu-container"
+      data-menu-button
+    >
+      <svg
+        class="main-nav__mobile-menu-icon"
+        aria-label="Переключатель мобильного меню"
       >
-        <svg
-          class="main-nav__mobile-menu-icon"
-          aria-label="Переключатель мобильного меню"
-        >
-          <use
-            class="main-nav__mobile-menu-icon--open"
-            href="./images/sprite.svg#icon-menu"
-          ></use>
-          <use
-            class="main-nav__mobile-menu-icon--close"
-            href="./images/sprite.svg#icon-close"
-          ></use>
-        </svg>
-      </button>
-    </div>
+        <use
+          class="main-nav__mobile-menu-icon--open"
+          href="./images/sprite.svg#icon-menu"
+        ></use>
+        <use
+          class="main-nav__mobile-menu-icon--close"
+          href="./images/sprite.svg#icon-close"
+        ></use>
+      </svg>
+    </button>
+  </div>
 
-    <div class="slider">
-      <img src="./images/mobile-slider1.jpg" alt="" />
-      <p>A hair salon for men in Kyiv</p>
-      <h1>BarberShop</h1>
-      <p>
-        Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со
-        вкусом.
-      </p>
-    </div>
+  <div class="slider">
+    <img src="./images/mobile-slider3.jpg" alt="" />
+  </div>
+
+  <div class="header-content">
+    <p class="slogan inverse">A hair salon for men in Kyiv</p>
+    <h1 class="header-title">BarberShop</h1>
+    <p class="header-description">
+      Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со
+      вкусом.
+    </p>
   </div>
 </header>

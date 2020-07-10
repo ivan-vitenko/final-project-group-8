@@ -1,22 +1,35 @@
+.header {
+  position: relative;
+  padding: 0;
+}
+
 .logo {
   display: block;
   width: 69px;
+  height: 55px;
+  fill: $primary-background-color;
+
+  @media screen and (min-width: $tablet-screen) {
+    fill: $title-text-color;
+  }
 }
 
-.header-content {
+.header-nav-container {
   position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: inherit;
   width: 100%;
   top: 40px;
   padding-left: 31px;
   padding-right: 31px;
 
   @media screen and (min-width: $tablet-screen) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: initial;
+    padding-left: 50px;
+    padding-right: 39px;
+    width: inherit;
   }
 }
 
@@ -39,42 +52,140 @@
 }
 
 .mobile-menu-container {
-  width: 337px;
-  margin-left: auto;
-  padding: 118px 40px 227px 40px;
-
   @media screen and (max-width: 336px) {
     width: 100%;
   }
 
   @media screen and (max-width: $tablet-screen - 1px) {
+    width: 337px;
+    margin-left: auto;
+    padding: 118px 40px 227px 40px;
     background-color: $primary-background-color;
     box-shadow: -1px 0px 3px rgba(0, 0, 0, 0.16),
       -2px 0px 4px rgba(0, 0, 0, 0.08), -4px 0px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    display: flex;
+    align-items: baseline;
   }
 }
 
 .main-nav {
   @media screen and (max-width: $tablet-screen - 1px) {
-    margin-bottom: 50px;
+    margin-bottom: 64px;
   }
 
   @media screen and (min-width: $tablet-screen) {
-    display: flex;
-    margin-right: 84px;
+    margin-right: 47px;
   }
 
   @media screen and (min-width: $desktop-screen) {
-    margin-right: 305px;
+  }
+}
+
+.main-nav__nav,
+.header-phone {
+  color: $title-text-color;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.39;
+  letter-spacing: 0.01em;
+
+  @media screen and (min-width: $tablet-screen) {
+    color: $inverse-primery-text-color;
+    font-size: 12px;
+    line-height: 1.33;
   }
 }
 
 .main-nav__nav {
-  color: $title-text-color;
+  @media screen and (min-width: $tablet-screen) {
+    display: flex;
+  }
+}
 
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+.main-nav__nav li:not(:last-child),
+.header-phone,
+.header-socials li:not(:last-child) {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    margin-bottom: 24px;
+  }
+}
+
+.main-nav__nav li:not(:last-child) {
+  @media screen and (min-width: $tablet-screen) {
+    margin-right: 24px;
+  }
+}
+
+.header-phone,
+.header-socials a {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    display: block;
+  }
+}
+
+.header-phone {
+  @media screen and (min-width: $tablet-screen) {
+    order: 2;
+  }
+}
+
+.header-contacts {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header-contacts .button.secondary {
+  @media screen and (min-width: $tablet-screen) {
+    color: $inverse-primery-text-color;
+    margin-bottom: 20px;
+  }
+}
+
+.header-socials {
+  text-transform: initial;
+  letter-spacing: 0.2em;
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    align-items: initial;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotate(-90deg) translateY(-54px) translateX(-407px);
+  }
+
+  &::before {
+    margin-right: 40px;
+
+    @media screen and (max-width: $tablet-screen - 1px) {
+      transform: translateY(10px);
+    }
+  }
+}
+
+.header-socials ul {
+  @media screen and (min-width: $tablet-screen) {
+    display: flex;
+  }
+}
+
+.header-socials li:not(:last-child) {
+  @media screen and (min-width: $tablet-screen) {
+    margin-right: 40px;
+  }
 }
 
 .main-nav__mobile-menu-button {
@@ -116,4 +227,42 @@
 }
 
 .slider {
+  @media screen and (min-width: $tablet-screen) {
+    width: 609px;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    width: 1125px;
+  }
+}
+
+.header-content {
+  position: absolute;
+  top: 0;
+  padding-top: 208px;
+  padding-bottom: 183px;
+  padding-left: 31px;
+
+  @media screen and (min-width: $tablet-screen) {
+    width: 609px;
+    right: 0;
+  }
+}
+
+.header-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: $inverse-primery-text-color;
+}
+
+.header-description {
+  width: 306px;
+  font-size: 16px;
+  line-height: 1.62;
+  color: $inverse-secondary-text-color;
 }
