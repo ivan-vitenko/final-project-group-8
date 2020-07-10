@@ -28,8 +28,27 @@
   align-items: center;
 }
 
-.net {
+.net-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+
+  color: red;
+  fill: $title-text-color;
+  background-color: $primary-background-color;
+
+  transition: color $duration-animation $timing-animation 0ms,
+    background-color $duration-animation $timing-animation 0ms;
+
+  &:hover,
+  &:focus {
+    fill: currentColor;
+    color: $accent-color;
+    background-color: $primary-background-color;
+  }
 }
 
 .net:not(:last-child) {
