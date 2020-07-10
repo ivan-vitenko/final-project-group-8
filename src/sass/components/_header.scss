@@ -31,6 +31,11 @@
     padding-right: 39px;
     width: inherit;
   }
+
+  @media screen and (min-width: $desktop-screen) {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
 }
 
 .mobile-menu-backdrop {
@@ -81,6 +86,7 @@
   }
 
   @media screen and (min-width: $desktop-screen) {
+    margin-right: 322px;
   }
 }
 
@@ -90,7 +96,7 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 1.39;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.1em;
 
   @media screen and (min-width: $tablet-screen) {
     color: $inverse-primery-text-color;
@@ -117,6 +123,10 @@
   @media screen and (min-width: $tablet-screen) {
     margin-right: 24px;
   }
+
+  @media screen and (min-width: $desktop-screen) {
+    margin-right: 40px;
+  }
 }
 
 .header-phone,
@@ -127,8 +137,12 @@
 }
 
 .header-phone {
-  @media screen and (min-width: $tablet-screen) {
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
     order: 2;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    margin-right: 40px;
   }
 }
 
@@ -137,7 +151,7 @@
     margin-bottom: 64px;
   }
 
-  @media screen and (min-width: $tablet-screen) {
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,9 +159,12 @@
 }
 
 .header-contacts .button.secondary {
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+    margin-bottom: 20px;
+  }
+
   @media screen and (min-width: $tablet-screen) {
     color: $inverse-primery-text-color;
-    margin-bottom: 20px;
   }
 }
 
@@ -232,7 +249,7 @@
     margin-left: auto;
   }
 
-  @media screen and (min-width: $tablet-screen) {
+  @media screen and (min-width: $desktop-screen) {
     width: 1125px;
   }
 }
