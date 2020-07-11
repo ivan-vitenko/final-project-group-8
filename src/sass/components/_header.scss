@@ -258,9 +258,11 @@
 .header-content {
   position: absolute;
   top: 0;
+  width: 100%;
   padding-top: 208px;
   padding-bottom: 183px;
   padding-left: 31px;
+  padding-right: 15px;
 
   @media screen and (min-width: $tablet-screen) {
     width: 609px;
@@ -272,6 +274,8 @@
 
   @media screen and (min-width: $desktop-screen) {
     width: 1125px;
+    padding-bottom: 206px;
+    padding-left: 100px;
   }
 }
 
@@ -283,6 +287,11 @@
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: $inverse-primery-text-color;
+
+  @media screen and (min-width: $desktop-screen) {
+    font-size: 72px;
+    line-height: 1.18;
+  }
 }
 
 .header-description {
@@ -290,4 +299,14 @@
   font-size: 16px;
   line-height: 1.62;
   color: $inverse-secondary-text-color;
+
+  @media screen and (min-width: $tablet-screen) {
+    width: 355px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    width: 486px;
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
