@@ -28,7 +28,9 @@
 }
 
 .member:not(:last-child) {
-  margin-bottom: 64px;
+  @media screen and (max-width: $desktop-screen - 1px) {
+    margin-bottom: 64px;
+  }
 }
 
 .photo {
