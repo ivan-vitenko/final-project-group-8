@@ -21,6 +21,9 @@
 .member {
   @media screen and (min-width: $desktop-screen) {
     margin: 15px;
+
+    // по макету max-height: 502px розбіжність 1px
+    max-height: 501px;
   }
 }
 
