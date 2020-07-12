@@ -1,9 +1,29 @@
+* {
+  outline: 1px solid;
+}
+
 .our-masters {
   background-color: $secondary-background-color;
 }
 
 .section-title.margin {
-  margin-bottom: 44px;
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 44px;
+  }
+}
+
+.team {
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.member {
+  @media screen and (min-width: 1280px) {
+    margin: 15px;
+  }
 }
 
 .member:not(:last-child) {
@@ -11,7 +31,21 @@
 }
 
 .photo {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 480px) {
+    width: 418px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 370px;
+  }
 }
 
 .name {
