@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
     />
+    <link rel="stylesheet" href="./sass/main.css" />
     <title>Заголовок страницы</title>
     <link
       rel="stylesheet"
@@ -19,8 +20,39 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./sass/main.css" />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    ></script>
+    <!-- FlexSlider -->
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      var $ = jQuery.noConflict();
+      $(window).load(function () {
+        $('.flexslider').flexslider({
+          animation: 'fade',
+        });
+
+        $(function () {
+          $('.show_menu').click(function () {
+            $('.menu').fadeIn();
+            $('.show_menu').fadeOut();
+            $('.hide_menu').fadeIn();
+          });
+          $('.hide_menu').click(function () {
+            $('.menu').fadeOut();
+            $('.show_menu').fadeIn();
+            $('.hide_menu').fadeOut();
+          });
+        });
+      });
+    </script>
   </head>
   <body>
+    <include src="./partials/header-v2.html"></include>
+
     <main>
       <include src="./partials/about_us.html"></include>
       <include src="./partials/price.html"></include>
@@ -30,6 +62,11 @@
     </main>
 
     <include src="./partials/footer.html"></include>
+
+
+    <script src="./js/menu.js"></script>
+
+
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>
