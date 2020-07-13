@@ -1,6 +1,16 @@
 .header {
   position: relative;
   padding: 0;
+
+  @media screen and (min-width: $desktop-screen) {
+    overflow: hidden;
+  }
+}
+
+.container.header {
+  @media screen and (min-width: $desktop-screen) {
+    width: 1280px;
+  }
 }
 
 .logo {
@@ -19,22 +29,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: inherit;
-  width: 100%;
   top: 40px;
-  padding-left: 31px;
-  padding-right: 31px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 
-  @media screen and (min-width: $tablet-screen) {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
     align-items: initial;
     padding-left: 50px;
     padding-right: 39px;
-    width: inherit;
-  }
-
-  @media screen and (min-width: $desktop-screen) {
-    padding-left: 55px;
-    padding-right: 55px;
   }
 }
 
@@ -185,6 +192,10 @@
     transform: rotate(-90deg) translateY(-50px) translateX(-407px);
   }
 
+  @media screen and (min-width: $desktop-screen) {
+    transform: rotate(-90deg) translateY(-90px) translateX(-407px);
+  }
+
   &::before {
     margin-right: 40px;
 
@@ -244,15 +255,192 @@
   display: block;
 }
 
-.slider {
+.slider-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.flex-container a:active,
+.flexslider a:active {
+  outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slides {
   @media screen and (min-width: $tablet-screen) {
     width: 609px;
     margin-left: auto;
   }
 
   @media screen and (min-width: $desktop-screen) {
+    position: absolute;
+    right: -40px;
     width: 1125px;
   }
+}
+
+.flex-direction-nav {
+  position: absolute;
+  display: flex;
+  right: 39px;
+  bottom: 40px;
+
+  @media screen and (min-width: $desktop-screen) {
+    right: 15px;
+  }
+}
+
+.flex-direction-nav li:first-child {
+  margin-right: 26px;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+  width: 100%;
+  margin: 0;
+
+  @media screen and (min-width: $desktop-screen) {
+    height: 680px;
+  }
+}
+
+.flexslider .slides > li {
+  display: none;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+.slides:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .slides {
+  display: block;
+}
+* html .slides {
+  height: 1%;
+}
+.no-js .slides > li:first-child {
+  display: block;
+}
+.flexslider {
+  position: relative;
+}
+
+.flexslider .slides > li {
+  position: relative;
+}
+.flex-container {
+  position: relative;
+}
+
+/* Direction Nav */
+.flex-control-nav,
+.flex-direction-nav {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    display: none;
+  }
+}
+
+.flex-direction-nav li a {
+  display: block;
+  width: 60px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+
+  line-height: 1.36;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.flex-direction-nav li a.next {
+  text-align: right;
+}
+
+.flex-direction-nav li a.prev {
+}
+
+.flex-direction-nav li a.next:hover,
+.flex-direction-nav li a.prev:hover,
+.flex-direction-nav li a.next:focus,
+.flex-direction-nav li a.prev:focus {
+  color: #ffffff;
+}
+
+.flex-direction-nav li a.next:hover::after,
+.flex-direction-nav li a.prev:hover::after {
+  background-color: #ffffff;
+}
+
+.flex-direction-nav li a.next::after,
+.flex-direction-nav li a.prev::after {
+  position: absolute;
+  display: block;
+  content: ' ';
+  bottom: 0;
+  width: inherit;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
+.flex-direction-nav li a.disabled {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+
+/* Control Nav */
+.flex-control-nav {
+  position: absolute;
+  top: 50%;
+  right: 39px;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  @media screen and (min-width: $desktop-screen) {
+    right: 15px;
+  }
+}
+
+.flex-control-nav li a {
+  margin-left: auto;
+  font-size: 9px;
+  color: transparent;
+  width: 8px;
+  height: 8px;
+  display: block;
+  cursor: pointer;
+}
+
+.flex-control-nav li {
+  height: 2px;
+  background-color: #9da4bd;
+}
+
+.flex-control-nav li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.flex-control-nav li a.active::after {
+  width: 18px;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  content: ' ';
+  transform: translateY(-16px) translateX(-10px);
 }
 
 .header-content {
@@ -260,22 +448,18 @@
   top: 0;
   width: 100%;
   padding-top: 208px;
-  padding-bottom: 183px;
-  padding-left: 31px;
-  padding-right: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 
   @media screen and (min-width: $tablet-screen) {
-    width: 609px;
-    right: 0;
+    width: $tablet-screen;
     padding-top: 272px;
-    padding-bottom: 245px;
-    padding-left: 120px;
+    padding-left: 279px;
   }
 
   @media screen and (min-width: $desktop-screen) {
-    width: 1125px;
-    padding-bottom: 206px;
-    padding-left: 100px;
+    width: $desktop-screen;
+    padding-left: 215px;
   }
 }
 
@@ -283,10 +467,14 @@
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
-  font-size: 48px;
+  font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: $inverse-primery-text-color;
+
+  @media screen and (min-width: 368px) {
+    font-size: 48px;
+  }
 
   @media screen and (min-width: $desktop-screen) {
     font-size: 72px;
@@ -295,17 +483,21 @@
 }
 
 .header-description {
-  width: 306px;
+  width: 100%;
   font-size: 16px;
   line-height: 1.62;
   color: $inverse-secondary-text-color;
+
+  @media screen and (min-width: 368px) {
+    width: 306px;
+  }
 
   @media screen and (min-width: $tablet-screen) {
     width: 355px;
   }
 
   @media screen and (min-width: $desktop-screen) {
-    width: 486px;
+    width: 476px;
     font-size: 18px;
     line-height: 1.67;
   }

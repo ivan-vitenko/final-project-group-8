@@ -20,18 +20,47 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./sass/main.css" />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    ></script>
+    <!-- FlexSlider -->
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      var $ = jQuery.noConflict();
+      $(window).load(function () {
+        $('.flexslider').flexslider({
+          animation: 'fade',
+        });
+
+        $(function () {
+          $('.show_menu').click(function () {
+            $('.menu').fadeIn();
+            $('.show_menu').fadeOut();
+            $('.hide_menu').fadeIn();
+          });
+          $('.hide_menu').click(function () {
+            $('.menu').fadeOut();
+            $('.show_menu').fadeIn();
+            $('.hide_menu').fadeOut();
+          });
+        });
+      });
+    </script>
   </head>
   <body>
-    <include src="./partials/header.html"></include>
+    <include src="./partials/header-v2.html"></include>
 
-    <main>
+    <!--<main>
       <include src="./partials/about_us.html"></include>
       <include src="./partials/price.html"></include>
       <include src="./partials/section-feature.html"></include>
       <include src="./partials/boroda.html"></include>
     </main>
 
-    <include src="./partials/footer.html"></include>
+    <include src="./partials/footer.html"></include>-->
 
     <script src="./js/menu.js"></script>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
