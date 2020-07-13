@@ -30,7 +30,7 @@
     }
   }
 
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: $desktop-screen - 1px) {
     .item:nth-child(2n + 1) {
       margin-right: 30px;
     }
@@ -57,7 +57,7 @@
 .portfolio-list .thumb {
   height: 360px;
 
-  @media screen and(min-width:768px) {
+  @media screen and(min-width: $tablet-screen) {
     height: 360px;
   }
 }
