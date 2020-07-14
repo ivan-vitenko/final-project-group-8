@@ -3,6 +3,19 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 body {
   background-color: #ffffff;
   color: #555555;
@@ -30,6 +43,8 @@ body {
 @media screen and (max-width: 767px) {
   .container {
     max-width: 480px;
+    padding-left: 31px;
+    padding-right: 31px;
   }
 }
 
@@ -42,12 +57,22 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -130,6 +155,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -170,6 +197,7 @@ a:hover, a:focus {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 
 @media screen and (max-width: 1199px) {
   .about-us .section-title {
@@ -223,13 +251,17 @@ a:hover, a:focus {
   }
 }
 
+
 @media screen and (max-width: 1199px) {
+
   .desktop-images {
     display: none;
   }
 }
 
+
 @media screen and (min-width: 1200px) {
+
   .desktop-images {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -238,7 +270,9 @@ a:hover, a:focus {
   }
 }
 
+
 @media screen and (min-width: 1200px) {
+
   .desktop-images .item:not(:last-child) {
     margin-right: 30px;
   }
@@ -250,13 +284,16 @@ a:hover, a:focus {
   }
 }
 
+
 @media screen and (min-width: 1200px) {
+
   .about-us-description {
     width: 500px;
   }
 }
 
 .price {
+  max-width: 1200px;
   background: #111319;
   background-image: url(/images/img.png);
   background-size: cover;
@@ -291,6 +328,7 @@ a:hover, a:focus {
   color: rgba(157, 164, 189, 0.6);
 }
 
+
 @media screen and (min-width: 768px) {
   .price__text {
     padding-top: 100px;
@@ -302,6 +340,7 @@ a:hover, a:focus {
     padding-top: 130px;
   }
 }
+
 
 .price__text::before {
   content: '';
@@ -321,11 +360,13 @@ a:hover, a:focus {
   padding-bottom: 44px;
   margin: 0px;
   font-family: 'Raleway', sans-serif;
+
   font-style: normal;
   font-weight: bold;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+
   color: #ffffff;
 }
 
@@ -348,10 +389,12 @@ a:hover, a:focus {
   letter-spacing: 0.02em;
 }
 
+
 @media screen and (max-width: 1199px) {
   .price__flex {
     display: none;
     max-width: 1200px;
+
   }
 }
 
@@ -407,6 +450,7 @@ a:hover, a:focus {
   list-style: none;
   color: #9DA4BD;
 }
+
 
 @media screen and (min-width: 768px) {
   .price__block-one {
@@ -469,6 +513,7 @@ a:hover, a:focus {
   width: 160px;
   height: 40px;
   background-color: transparent;
+
   color: #ffffff;
   border: 1px solid #ff6c00;
   border-radius: 25px;
@@ -486,11 +531,24 @@ a:hover, a:focus {
 }
 
 .section-title {
+
+  color: #FFFFFF;
+  border: 1px solid #FF6C00;
+  border-radius: 25px;
+}
+
+.price__button:focus, .price__button:hover {
+  background-color: #FF6C00;
+}
+
+.feature-title {
+
   margin-top: 0;
   margin-bottom: 20px;
   text-align: left;
   letter-spacing: 0.05em;
 }
+
 
 .slogan {
   margin-top: 0;
@@ -501,15 +559,17 @@ a:hover, a:focus {
   max-width: 418px;
   height: 90px;
   margin-top: 0;
+
   margin-bottom: 44px;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-text {
     height: 60px;
+
   }
 }
 
@@ -525,12 +585,14 @@ a:hover, a:focus {
   }
 }
 
+
 .feature-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+
 }
 
 @media screen and (max-width: 480px) {
@@ -539,9 +601,10 @@ a:hover, a:focus {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list {
     width: 450px;
+
     margin-left: auto;
   }
 }
@@ -559,9 +622,11 @@ a:hover, a:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+
   max-width: 194px;
   height: 133px;
   padding: 20px 28px;
+
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -577,7 +642,7 @@ a:hover, a:focus {
   background: #f7f7f7;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list-item {
     max-width: 210px;
   }
@@ -589,7 +654,7 @@ a:hover, a:focus {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list-item {
     padding-left: 36px;
     padding-right: 36px;
@@ -611,11 +676,13 @@ a:hover, a:focus {
   margin-right: 30px;
 }
 
+
 @media screen and (max-width: 480px) {
   .feature-list-item:nth-child(2n + 1) {
     margin-right: 29px;
   }
 }
+
 
 .feature-list-item:nth-child(2n) {
   -webkit-transform: translateY(29px);
@@ -652,15 +719,83 @@ a:hover, a:focus {
   }
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.barba {
+  margin-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.portfolio-list .item {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list .item {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list .item {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-list .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .portfolio-list .item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .portfolio-list .item:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list .item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.portfolio-list img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+
+.portfolio-list .thumb {
+  height: 360px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list .thumb {
+    height: 360px;
+  }
+
 }
 
 .icon-map-pin,
