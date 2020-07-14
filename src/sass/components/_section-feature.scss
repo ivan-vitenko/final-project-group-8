@@ -38,7 +38,7 @@
   }
 
   @media screen and (min-width: $desktop-screen) {
-    transform: translateY(-30px);
+    transform: translateY(-35px);
     max-width: 370px;
     margin-right: 130px;
   }
@@ -84,11 +84,10 @@
   }
 
   &:nth-child(2n) {
-    transform: translateY(30px);
+    transform: translateY(35px);
   }
 }
 .feature-list-numeric {
-  margin-right: 2px;
   margin-bottom: 6px;
   font-weight: 700;
   font-size: 42px;
@@ -99,7 +98,7 @@
 }
 
 .feature-list-sup {
-  transform: translateY(-15px);
+  transform: translateY(-6px);
   font-size: 16px;
   line-height: 1.375;
 
