@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/main.scss"],"names":[],"mappings":"AAMA,KACE","file":"src.cdde70ee.css","sourceRoot":"../src","sourcesContent":["/*\n * Главный файл стилей.\n * Все паршалы подключаются сюда.\n */\n@import './utils/variables';\n\nbody {\n  background-color: green;\n}\n"]}

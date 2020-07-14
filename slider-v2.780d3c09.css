@@ -1,0 +1,151 @@
+.flex-container a:active,
+.flexslider a:active {
+  outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex-direction-nav {
+  position: absolute;
+  display: flex;
+  right: 55px;
+  bottom: 40px;
+}
+
+.flex-direction-nav li:first-child {
+  margin-right: 26px;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+  width: 100%;
+  margin: 0;
+}
+.flexslider .slides > li {
+  display: none;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+.slides:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .slides {
+  display: block;
+}
+* html .slides {
+  height: 1%;
+}
+.no-js .slides > li:first-child {
+  display: block;
+}
+.flexslider {
+  position: relative;
+}
+
+.flexslider .slides > li {
+  position: relative;
+}
+.flex-container {
+  position: relative;
+}
+
+/* Direction Nav */
+.flex-direction-nav li a {
+  display: block;
+  width: 60px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+
+  line-height: 1.36;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.flex-direction-nav li a.next {
+  text-align: right;
+}
+
+.flex-direction-nav li a.prev {
+}
+
+.flex-direction-nav li a.next:hover,
+.flex-direction-nav li a.prev:hover,
+.flex-direction-nav li a.next:focus,
+.flex-direction-nav li a.prev:focus {
+  color: #ffffff;
+}
+
+.flex-direction-nav li a.next:hover::after,
+.flex-direction-nav li a.prev:hover::after {
+  background-color: #ffffff;
+}
+
+.flex-direction-nav li a.next::after,
+.flex-direction-nav li a.prev::after {
+  position: absolute;
+  display: block;
+  content: ' ';
+  bottom: 0;
+  width: inherit;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
+.flex-direction-nav li a.disabled {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+
+/* Control Nav */
+.flex-control-nav {
+  position: absolute;
+  top: 50%;
+  right: 55px;
+  transform: translateY(-50%);
+}
+
+.flex-control-nav li a {
+  margin-left: auto;
+  font-size: 9px;
+  color: transparent;
+  width: 8px;
+  height: 8px;
+  display: block;
+  cursor: pointer;
+}
+
+.flex-control-nav li {
+  height: 2px;
+  background-color: #9da4bd;
+}
+
+.flex-control-nav li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.flex-control-nav li a.active::after {
+  width: 18px;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  content: ' ';
+  transform: translateY(-16px) translateX(-10px);
+}
+
+
+/*# sourceMappingURL=/slider-v2.780d3c09.css.map */

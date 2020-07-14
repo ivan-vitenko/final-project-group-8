@@ -184,16 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"/home/nickname/Fullstack/parcel-project-template/src/images/img.png":[["img.d093e3de.png","images/img.png"],"images/img.png"],"./../images/bg-footer.png":[["bg-footer.41ae13f8.png","images/bg-footer.png"],"images/bg-footer.png"],"./../images/bg-footer@2x.png":[["bg-footer@2x.e7877c15.png","images/bg-footer@2x.png"],"images/bg-footer@2x.png"],"./../images/bg-footer768.png":[["bg-footer768.5a20cee0.png","images/bg-footer768.png"],"images/bg-footer768.png"],"./../images/bg-footer768@2x.png":[["bg-footer768@2x.941a2b73.png","images/bg-footer768@2x.png"],"images/bg-footer768@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/home/nickname/Fullstack/parcel-project-template/src/images/img.png":[["img.d093e3de.png","images/img.png"],"images/img.png"],"./../images/bg-footer.png":[["bg-footer.41ae13f8.png","images/bg-footer.png"],"images/bg-footer.png"],"./../images/bg-footer@2x.png":[["bg-footer@2x.e7877c15.png","images/bg-footer@2x.png"],"images/bg-footer@2x.png"],"./../images/bg-footer768.png":[["bg-footer768.5a20cee0.png","images/bg-footer768.png"],"images/bg-footer768.png"],"./../images/bg-footer768@2x.png":[["bg-footer768@2x.941a2b73.png","images/bg-footer768@2x.png"],"images/bg-footer768@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/main.521f9405.js.map
