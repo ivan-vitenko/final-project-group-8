@@ -1,6 +1,6 @@
 .price {
-  max-width: 1280px;
-    background: #111319;
+  max-width: 1200px;
+    background: $price-background-color;
     background-image: url(/images/img.png);
     background-size: cover;
     padding-bottom: 130px;
@@ -9,41 +9,60 @@
 .price__text {
 margin: 0px;
 padding-top: 130px;
-padding-left: 55px;
+padding-left: 16px;
 font-family: Open Sans;
 font-weight: 600;
 font-size: 11px;
 line-height: 1.36;
 letter-spacing: 0.1em;
 text-transform: uppercase;
-color: rgba(157, 164, 189, 0.6);
+color: $inverse-other-text-color;
+
+@media screen and (min-width: 768px) {
+  padding-left: 24px;
+}
+@media screen and (min-width: 1200px) {
+  padding-left: 40px;
 }
 
-.price__text::before {
+&::before {
   content: '';
   display: inline-block;
   vertical-align: middle;
 white-space: nowrap;
 overflow: hidden;
-color: rgba(157, 164, 189, 0.12);
+color: $price-line;
 width: 60px;
-background-color: rgba(157, 164, 189, 0.6);
+background-color: $inverse-other-text-color;
 height: 1px;
     margin-right: 20px;
 }
 
+}
+
+
+
 .price__title {
+
     padding-top: 20px;
-    padding-left: 55px;
+    padding-left: 16px;
     padding-bottom: 44px;
     margin: 0px;
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
 font-style: normal;
 font-weight: bold;
 font-size: 42px;
 line-height: 1.17;
 letter-spacing: 0.05em;
-color: #FFFFFF;
+color: $primary-background-color;
+
+@media screen and (min-width: 768px) {
+  padding-left: 24px;
+}
+@media screen and (min-width: 1200px) {
+  padding-left: 40px;
+}
+
 }
 
 .price__flex {
@@ -59,9 +78,9 @@ margin-bottom: 50px;
     letter-spacing: 0.02em;
 
 
-    @media screen and(max-width: 1200px) {
+    @media screen and(max-width: 1199px) {
       display: none;
-      max-width: 1280px;
+      max-width: 1200px;
     }
   
     @media screen and (min-width: 768px) {
@@ -94,52 +113,58 @@ margin-bottom: 50px;
   }
 
 .price__block-one {
-  width: calc((100% - 2 * 31px));
+  width: calc((100% - 2 * 16px));
     margin: 0px;
     padding-top: 30px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 30px;
-    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    background: $background-style;
     list-style: none;
-    color: #9DA4BD;
+    color: $price-block-text;
 
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 2 * 24px));
+    }
+    
     @media screen and(min-width: 1200px) {
-      width: calc((100% - 2 * 55px) / 2);
+      width: calc((100% - 2 * 40px) / 2);
     }
 }
 
 .price__block-two {
-  width: calc((100% - 2 * 31px));
+  width: calc((100% - 2 * 16px));
     margin: 0px;
     padding-top: 30px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 30px;
-    background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+    background: $background-style-two;
     list-style: none;
-    color: #9DA4BD;
+    color: $price-block-text;
 
         @media screen and(min-width: 768px) {
-      width: calc((100% - 2 * 39px) / 2);
+      width: calc((100% - 2 * 24px) / 2);
     }
 
     @media screen and(min-width: 1200px) {
-      width: calc((100% - 2 * 55px) / 2);
+      width: calc((100% - 2 * 40px) / 2);
     }
 }
 
 .price__item {
     padding-bottom: 20px;
+
+    &:after {
+      content: '_____________________________________________________________________________________________';
+        display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      color: $price-line;
+    }
 }
 
-  .price__item:after {
-    content: '_____________________________________________________________________________________________';
-      display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    color: rgba(157, 164, 189, 0.12);
-  }
+
 
   .price__prop {
     float: left;
@@ -156,11 +181,18 @@ margin-bottom: 50px;
     width: 160px;
 height: 40px;
 background-color: transparent;
-color: #FFFFFF;
-border: 1px solid #FF6C00;
+color: $primary-background-color;
+border: 1px solid $accent-color;
 border-radius: 25px;
+font-family: Open Sans;
+font-weight: 600;
+font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+
+&:focus, &:hover {
+  background-color: $accent-color;
+}
 }
 
-.price__button:focus, .price__button:hover {
-  background-color: #FF6C00;
-}
