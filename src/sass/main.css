@@ -56,6 +56,7 @@ p {
 }
 
 .container {
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -71,6 +72,12 @@ p {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
     padding-left: 39px;
     padding-right: 39px;
   }
@@ -82,6 +89,12 @@ p {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -427,6 +440,42 @@ a:hover, a:focus {
   margin-bottom: 0;
 }
 
+.price {
+  max-width: 1200px;
+  background: #111319;
+  background-image: url(/images/img.png);
+  background-size: cover;
+  padding-bottom: 130px;
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+@media screen and (min-width: 768px) {
+  .price {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+.price__text {
+  margin: 0px;
+  padding-top: 84px;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+
 @media screen and (max-width: 767px) {
   .header-socials {
     -webkit-box-align: initial;
@@ -443,6 +492,9 @@ a:hover, a:focus {
     bottom: 0;
     -webkit-transform: rotate(-90deg) translateY(-50px) translateX(-407px);
             transform: rotate(-90deg) translateY(-50px) translateX(-407px);
+    
+  .price__text {
+    padding-top: 100px;
   }
 }
 
@@ -450,6 +502,9 @@ a:hover, a:focus {
   .header-socials {
     -webkit-transform: rotate(-90deg) translateY(-90px) translateX(-407px);
             transform: rotate(-90deg) translateY(-90px) translateX(-407px);
+
+  .price__text {
+    padding-top: 130px;
   }
 }
 
@@ -472,6 +527,13 @@ a:hover, a:focus {
   }
 }
 
+.price__title {
+  padding-top: 20px;
+  padding-bottom: 44px;
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+}
+  
 @media screen and (min-width: 768px) {
   .header-socials li:not(:last-child) {
     margin-right: 40px;
@@ -504,6 +566,25 @@ a:hover, a:focus {
 
 .main-nav__mobile-menu-icon--open {
   display: block;
+  }
+
+.price__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 }
 
 .main-nav__mobile-menu-button.is-open .main-nav__mobile-menu-icon--open {
@@ -559,6 +640,10 @@ a:hover, a:focus {
   right: 39px;
   bottom: 40px;
 }
+  
+  .mobile {
+  width: 100%;
+  }
 
 @media screen and (min-width: 1200px) {
   .flex-direction-nav {
@@ -607,6 +692,54 @@ html[xmlns] .slides {
 
 * html .slides {
   height: 1%;
+  }
+
+.price__block-one {
+  width: 100%;
+  margin: 0px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#171A24), to(rgba(23, 26, 36, 0.2)));
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+  list-style: none;
+  color: #9DA4BD;
+}
+
+
+@media screen and (min-width: 768px) {
+  .price__block-one {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price__block-one {
+    width: calc((100%) / 2);
+  }
+}
+
+.price__block-two {
+  width: calc((100%) / 2);
+  margin: 0px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#090B13), to(rgba(9, 11, 19, 0.2)));
+  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+  list-style: none;
+  color: #9DA4BD;
+}
+
+.price__item {
+  padding-bottom: 20px;
+  font-family: Open Sans;
+  font-size: 14px;
+  line-height: 2.14;
+  letter-spacing: 0.02em;
 }
 
 .no-js .slides > li:first-child {
@@ -615,6 +748,14 @@ html[xmlns] .slides {
 
 .flexslider {
   position: relative;
+  }
+
+.price__item:last-child {
+  padding-bottom: 0px;
+}
+
+.price__prop {
+  float: left;
 }
 
 .flexslider .slides > li {
@@ -623,6 +764,26 @@ html[xmlns] .slides {
 
 .flex-container {
   position: relative;
+  }
+
+.price__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+  height: 40px;
+  background-color: transparent;
+
+  color: #ffffff;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0px;
 }
 
 /* Direction Nav */
@@ -675,6 +836,12 @@ html[xmlns] .slides {
   opacity: 0.3;
   filter: alpha(opacity=30);
   cursor: default;
+  }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature-text {
+    height: 60px;
+  }
 }
 
 /* Control Nav */
@@ -732,6 +899,12 @@ html[xmlns] .slides {
           transform: translateX(-50%);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature-list {
+    width: 450px;
+  }
+  }
+    
 @media screen and (min-width: 768px) {
   .header-content {
     width: 768px;
@@ -760,6 +933,12 @@ html[xmlns] .slides {
 @media screen and (min-width: 368px) {
   .header-title {
     font-size: 48px;
+  }
+  }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature-list-item {
+    max-width: 210px;
   }
 }
 
@@ -794,6 +973,20 @@ html[xmlns] .slides {
     width: 476px;
     font-size: 18px;
     line-height: 1.67;
+  }
+  }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .feature-list-item {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature-list-item {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -1380,6 +1573,10 @@ html[xmlns] .slides {
   margin-right: 10px;
 }
 
+.barba {
+  margin-bottom: 44px;
+}
+
 @media screen and (min-width: 768px) {
   .portfolio-list {
     display: -webkit-box;
@@ -1398,7 +1595,7 @@ html[xmlns] .slides {
 }
 
 .portfolio-list .item {
-  width: 418px;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1419,7 +1616,7 @@ html[xmlns] .slides {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1279px) {
   .portfolio-list .item:nth-child(2n + 1) {
     margin-right: 30px;
   }
