@@ -446,9 +446,13 @@ html[xmlns] .slides {
   position: absolute;
   top: 0;
   width: 100%;
-  padding-top: 208px;
+  padding-top: 45vw;
   left: 50%;
   transform: translateX(-50%);
+
+  @media screen and (min-width: 368px) {
+    padding-top: 208px;
+  }
 
   @media screen and (min-width: $tablet-screen) {
     width: $tablet-screen;
@@ -462,11 +466,17 @@ html[xmlns] .slides {
   }
 }
 
+.header-content .slogan.inverse::before {
+  @media screen and (max-width: 341px) {
+    transform: translateY(-8px);
+  }
+}
+
 .header-title {
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
-  font-size: 24px;
+  font-size: 13vw;
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: $inverse-primery-text-color;
