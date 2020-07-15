@@ -51,6 +51,9 @@
   display: block;
   position: relative;
   margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media screen and (min-width: $tablet-screen) {
     width: calc((100% - 60px) / 2);
     margin: 15px;
@@ -102,10 +105,12 @@
 }
 
 .list-input {
+  margin-bottom: 44px;
   @media screen and (min-width: $tablet-screen) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+    margin-bottom: 44px;
   }
 }
 
@@ -121,7 +126,7 @@ textarea + .text-label {
 }
 
 textarea.form-input {
-  margin-bottom: 44px;
+  // margin-bottom: 44px;
   resize: none;
   @media screen and (min-width: $tablet-screen) {
     width: 100%;
@@ -183,7 +188,9 @@ textarea.form-input {
   letter-spacing: 0.02em;
   margin-bottom: 20px;
   color: $inverse-secondary-text-color;
-
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media screen and (min-width: $tablet-screen) {
     & p {
       width: 290px;
