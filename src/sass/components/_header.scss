@@ -147,10 +147,6 @@
   @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
     order: 2;
   }
-
-  @media screen and (min-width: $desktop-screen) {
-    margin-right: 40px;
-  }
 }
 
 .header-contacts {
@@ -158,10 +154,17 @@
     margin-bottom: 64px;
   }
 
-  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+  @media screen and (min-width: $tablet-screen) {
     display: flex;
-    flex-direction: column;
     align-items: center;
+  }
+
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    width: 321px;
   }
 }
 
@@ -172,6 +175,10 @@
 
   @media screen and (min-width: $tablet-screen) {
     color: $inverse-primery-text-color;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    display: block;
   }
 }
 
@@ -368,9 +375,6 @@ html[xmlns] .slides {
 }
 .flex-direction-nav li a.next {
   text-align: right;
-}
-
-.flex-direction-nav li a.prev {
 }
 
 .flex-direction-nav li a.next:hover,
