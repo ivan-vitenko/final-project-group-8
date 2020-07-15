@@ -5,11 +5,6 @@
   letter-spacing: 0.05em;
 }
 .feature-text {
-  margin-bottom: 44px;
-
-  @media screen and (min-width: $desktop-screen) {
-    margin-bottom: 0;
-  }
   @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
     margin-right: 195px;
   }
@@ -21,6 +16,12 @@
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+}
+.feature-container {
+  margin-bottom: 44px;
+  @media screen and (min-width: $desktop-screen) {
+    margin-bottom: 0;
+  }
 }
 .feature-list {
   display: flex;
