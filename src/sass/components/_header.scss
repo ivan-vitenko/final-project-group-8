@@ -115,6 +115,12 @@
 .main-nav__nav {
   @media screen and (min-width: $tablet-screen) {
     display: flex;
+    justify-content: space-between;
+    width: 339px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    width: 387px;
   }
 }
 
@@ -123,16 +129,6 @@
 .header-socials li:not(:last-child) {
   @media screen and (max-width: $tablet-screen - 1px) {
     margin-bottom: 24px;
-  }
-}
-
-.main-nav__nav li:not(:last-child) {
-  @media screen and (min-width: $tablet-screen) {
-    margin-right: 24px;
-  }
-
-  @media screen and (min-width: $desktop-screen) {
-    margin-right: 40px;
   }
 }
 
@@ -165,6 +161,7 @@
 
   @media screen and (min-width: $desktop-screen) {
     width: 321px;
+    justify-content: space-between;
   }
 }
 
