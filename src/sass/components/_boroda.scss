@@ -1,6 +1,20 @@
 .barba {
   margin-bottom: 44px;
+  line-height: 1.91;
+  
+  @media screen and (min-width: $tablet-screen) {
+    line-height: 1.36;
+  }
+
+  
+ &::before {
+   @media screen and (max-width: $tablet-screen - 1px) {
+    margin-bottom: 20px;
+  } 
+ } 
 }
+
+
 
 .portfolio-list {
   @media screen and (min-width: $tablet-screen) {
@@ -46,18 +60,4 @@
   }
 }
 
-.portfolio-list img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left;
-}
 
-.portfolio-list .thumb {
-  height: 360px;
-
-  @media screen and(min-width: $tablet-screen) {
-    height: 360px;
-  }
-}
