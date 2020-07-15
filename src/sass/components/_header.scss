@@ -80,20 +80,18 @@
   @media screen and (min-width: $tablet-screen) {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    width: 546px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    width: 1030px;
   }
 }
 
 .main-nav {
   @media screen and (max-width: $tablet-screen - 1px) {
     margin-bottom: 64px;
-  }
-
-  @media screen and (min-width: $tablet-screen) {
-    margin-right: 47px;
-  }
-
-  @media screen and (min-width: $desktop-screen) {
-    margin-right: 311px;
   }
 }
 
