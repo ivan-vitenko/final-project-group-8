@@ -2,64 +2,42 @@
 //   outline: 1px solid;
 // }
 
-// Медіа правило регулює вирівнювання декоративного елементу по вертикалі для слогану
-.masters::before {
-  @media screen and (max-width: 218px) {
-    margin-bottom: 42px;
-  }
-
-  @media screen and (min-width: 219px) and (max-width: 278px) {
-    margin-bottom: 26px;
-  }
-
-  @media screen and (min-width: 279px) and (max-width: 419px) {
-    margin-bottom: 13px;
-  }
-}
-
-// Ситилізує секцію
 .our-masters {
   background-color: $secondary-background-color;
 }
 
-// Ситилізує заголовок секції
 .section-title.margin {
-  // перебиває загальні стилі додатковим класом .margin
   margin-bottom: 44px;
 }
 
-// Ситилізує список майстрів
 .team {
   @media screen and (min-width: $desktop-screen) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
   }
+}
 
-  // Ситилізує елемент списку
-  .member {
-    @media screen and (min-width: $desktop-screen) {
-      margin: 15px;
+.member {
+  @media screen and (min-width: $desktop-screen) {
+    margin: 15px;
 
-      // по макету max-height: 502px розбіжність 1px
-      max-height: 501px;
-    }
-
-    &:not(:last-child) {
-      @media screen and (max-width: $desktop-screen - 1px) {
-        margin-bottom: 64px;
-      }
-    }
+    // по макету max-height: 502px розбіжність 1px
+    max-height: 501px;
   }
 }
 
-// Ситилізує фото майстра
+.member:not(:last-child) {
+  @media screen and (max-width: $desktop-screen - 1px) {
+    margin-bottom: 64px;
+  }
+}
+
 .photo {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
 
-  // Медіа правило регулює максимальну висоту
   @media screen and (min-width: $mobile-screen) {
     width: 418px;
   }
@@ -73,7 +51,6 @@
   }
 }
 
-// Стилізує Ім'я майстра
 .name {
   margin-bottom: 8px;
 
@@ -84,7 +61,6 @@
   color: $title-text-color;
 }
 
-// Стилізує напрямок майстра
 .post {
   margin-bottom: 30px;
 
@@ -95,19 +71,12 @@
   color: $accent-color;
 }
 
-// Стилізує список соц.мереж майстра
 .social-nets {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  // Стилізує елементи списку
-  .net:not(:last-child) {
-    margin-right: 10px;
-  }
 }
 
-// Стилізує кнопки соціальних мереж майстра
 .net-button {
   display: flex;
   justify-content: center;
@@ -121,10 +90,13 @@
 
   transition: fill $duration-animation $timing-animation 0ms;
 
-  // Стилізує підсвітку кольором
   &:hover,
   &:focus {
     fill: $accent-color;
     background-color: $primary-background-color;
   }
+}
+
+.net:not(:last-child) {
+  margin-right: 10px;
 }
