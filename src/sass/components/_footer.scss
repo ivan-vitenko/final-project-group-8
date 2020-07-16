@@ -126,7 +126,6 @@ textarea + .text-label {
 }
 
 textarea.form-input {
-  // margin-bottom: 44px;
   resize: none;
   @media screen and (min-width: $tablet-screen) {
     width: 100%;
@@ -177,6 +176,10 @@ textarea.form-input {
     padding-left: 0;
     margin-left: 30px;
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    margin-left: 0;
   }
 }
 
@@ -349,6 +352,8 @@ ul.social-link::before {
   margin-left: auto;
   margin-right: auto;
   max-width: $mobile-screen;
+
+  padding-right: 10px;
   @media screen and (min-width: $tablet-screen) {
     max-width: $tablet-screen;
   }
