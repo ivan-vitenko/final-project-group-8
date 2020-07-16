@@ -4,6 +4,14 @@
   text-align: left;
   letter-spacing: 0.05em;
 }
+.slogan-pozition.slogan::before {
+  @media screen and (max-width: 352px) {
+    transform: translateY(-7px);
+  }
+  @media screen and (max-width: 285px) {
+    transform: translateY(-15px);
+  }
+}
 .feature-text {
   @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
     margin-right: 195px;
