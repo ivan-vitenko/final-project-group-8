@@ -27,17 +27,23 @@
 
 .form-container {
   background: $footer-background-color;
+}
+
+.form-container > .footer-container {
   padding-left: 31px;
   padding-right: 31px;
+  max-width: $mobile-screen;
 
   @media screen and (min-width: $tablet-screen) {
     padding-left: 39px;
     padding-right: 39px;
+    max-width: $tablet-screen;
   }
 
   @media screen and (min-width: $desktop-screen) {
     padding-left: 55px;
     padding-right: 55px;
+    max-width: $desktop-screen;
   }
 }
 
@@ -45,6 +51,9 @@
   display: block;
   position: relative;
   margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media screen and (min-width: $tablet-screen) {
     width: calc((100% - 60px) / 2);
     margin: 15px;
@@ -96,10 +105,12 @@
 }
 
 .list-input {
+  margin-bottom: 44px;
   @media screen and (min-width: $tablet-screen) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+    margin-bottom: 44px;
   }
 }
 
@@ -115,7 +126,7 @@ textarea + .text-label {
 }
 
 textarea.form-input {
-  margin-bottom: 44px;
+  // margin-bottom: 44px;
   resize: none;
   @media screen and (min-width: $tablet-screen) {
     width: 100%;
@@ -165,6 +176,7 @@ textarea.form-input {
   @media screen and (min-width: $tablet-screen) {
     padding-left: 0;
     margin-left: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -177,7 +189,9 @@ textarea.form-input {
   letter-spacing: 0.02em;
   margin-bottom: 20px;
   color: $inverse-secondary-text-color;
-
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media screen and (min-width: $tablet-screen) {
     & p {
       width: 290px;
@@ -238,11 +252,13 @@ a.mail {
     justify-content: space-between;
     padding-top: 56px;
     padding-bottom: 56px;
+    padding-left: 39px;
+    padding-right: 39px;
   }
   @media screen and (min-width: $desktop-screen) {
     padding-left: 55px;
     padding-right: 55px;
-    max-width: 1280px;
+    max-width: $desktop-screen;
   }
 }
 
@@ -267,7 +283,7 @@ ul.social-link {
   flex-wrap: wrap;
   align-items: center;
   padding: 0;
-  margin-left: 21px;
+  margin-left: auto;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36px;
@@ -326,5 +342,17 @@ ul.social-link::before {
       padding-left: 100px;
       padding-right: 100px;
     }
+  }
+}
+
+.footer-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $mobile-screen;
+  @media screen and (min-width: $tablet-screen) {
+    max-width: $tablet-screen;
+  }
+  @media screen and (min-width: $desktop-screen) {
+    max-width: $desktop-screen;
   }
 }
