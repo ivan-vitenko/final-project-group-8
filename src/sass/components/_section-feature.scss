@@ -1,3 +1,8 @@
+.section.feature-section {
+  @media screen and (min-width: $desktop-screen) {
+    height: 582px;
+  }
+}
 .feature-title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -29,7 +34,6 @@
   margin-bottom: 44px;
   @media screen and (min-width: $desktop-screen) {
     margin-bottom: 0;
-    transform: translateY(-26px);
   }
 }
 .feature-list {
@@ -48,7 +52,7 @@
   }
 
   @media screen and (min-width: $desktop-screen) {
-    transform: translateY(-35px);
+    transform: translateY(-9px);
     max-width: 370px;
     margin-right: 130px;
   }
