@@ -29,6 +29,7 @@
   margin-bottom: 44px;
   @media screen and (min-width: $desktop-screen) {
     margin-bottom: 0;
+    transform: translateY(-26px);
   }
 }
 .feature-list {
