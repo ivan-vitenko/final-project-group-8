@@ -785,6 +785,7 @@ html[xmlns] .slides {
 }
 
 .price {
+  width: 100%;
   background: #111319;
   background-image: url(/img.d093e3de.png);
   background-size: cover;
@@ -795,6 +796,7 @@ html[xmlns] .slides {
 }
 @media screen and (min-width: 768px) {
   .price {
+    max-width: 768px;
     padding-top: 100px;
     padding-left: 39px;
     padding-right: 39px;
@@ -803,6 +805,7 @@ html[xmlns] .slides {
 }
 @media screen and (min-width: 1200px) {
   .price {
+    max-width: 1280px;
     padding-top: 130px;
     padding-left: 55px;
     padding-right: 55px;
@@ -938,7 +941,7 @@ html[xmlns] .slides {
   margin-bottom: 0px;
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .price__item:nth-child(4) {
     margin-bottom: 0px;
   }
